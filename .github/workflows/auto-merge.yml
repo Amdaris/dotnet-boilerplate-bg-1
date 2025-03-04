@@ -1,10 +1,13 @@
 name: Tests and Dependabot PR Handling
 
-on:
+on: 
   pull_request:
+    types: [opened, reopened]
+  push:
     branches:
-      - master
-      - main
+      - '*'
+      - '!master'
+      - '!main'
 permissions:
   contents: write
   pull-requests: write
